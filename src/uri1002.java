@@ -1,21 +1,21 @@
-import java.util.Locale;
+/* Minha versão deste exercício utilizando a biblioteca
+ * Math com a constante PI e o método pow().
+ * Código dos meus estudos em Java.
+ */
+
 import java.util.Scanner;
 
-public class uri1002 {
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in); // instancia para receber input
 
-	public static void main(String[] args) {
-		
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-		
-		double R, A, pi = 3.14159;
-	    
-	    R = sc.nextDouble();
+        double pi = Math.PI; // PI constante
+        double radius = sc.nextDouble(); // armazena o valor do raio
+        
+        double circleArea = pi * Math.pow(radius, 2); // calcula área do círculo
 
-	    A = pi * R * R;
+        System.out.printf("A área do círculo é: %.4f%n", circleArea);
 
-	    System.out.printf("A=%.4f%n", A);
-
-		sc.close();
-	}
+        sc.close();
+    }
 }
