@@ -1,6 +1,7 @@
 /* Minha versão deste exercício utilizando a biblioteca
  * Math com a constante PI e o método pow().
  * Código dos meus estudos em Java.
+ * Exercícios sobre Estrutura Sequencial (entrada, processamento, saída)
  */
 import java.util.Scanner;
 
