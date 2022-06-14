@@ -1,31 +1,38 @@
-import java.util.Locale;
+/* Minha versão deste exercício utilizando a biblioteca
+ * Math com a constante PI e o método pow().
+ * Código dos meus estudos em Java.
+ */
 import java.util.Scanner;
 
-public class uri1012 {
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) {
+        double n1 = sc.nextDouble();
+        double n2 = sc.nextDouble();
+        double n3 = sc.nextDouble();
 
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-		
-		double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
-		
-		A = sc.nextDouble();
-		B = sc.nextDouble();
-		C = sc.nextDouble();
-		
-		triangulo = A * C / 2.0;
-		circulo = 3.14159 * C * C;
-		trapezio = (A + B) / 2.0 * C;
-		quadrado = B * B;
-		retangulo = A * B;
-		
-		System.out.printf("TRIANGULO: %.3f%n", triangulo);
-		System.out.printf("CIRCULO: %.3f%n", circulo);
-		System.out.printf("TRAPEZIO: %.3f%n", trapezio);
-		System.out.printf("QUADRADO: %.3f%n", quadrado);
-		System.out.printf("RETANGULO: %.3f%n", retangulo);
-		
-		sc.close();
-	}
+        // Area Triangulo
+        double areaTri = (n1 * n3)/2;
+
+        // Area Circulo
+        double areaCirculo = Math.PI * Math.pow(n3, 2);
+
+        // Area Trapezio
+        double areaTrapezio = (n1 + n2) * n3 / 2;
+
+        // Area Quadrado
+        double areaQuadrado = n2 * n2;
+
+        // Area Retangulo
+        double areaRetangulo = n1 * n2;
+
+        System.out.printf("TRIANGULO: %.3f%n", areaTri);
+        System.out.printf("CIRCULO: %.3f%n", areaCirculo);
+        System.out.printf("TRAPEZIO: %.3f%n", areaTrapezio);
+        System.out.printf("QUADRADO: %.3f%n", areaQuadrado);
+        System.out.printf("RETANGULO: %.3f%n", areaRetangulo);
+
+        sc.close();
+    }
 }
